@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+
+  a(href='/myapp') MyApp
+  a(href='/myapp/signup') Sign Up
+  a(href='/myapp/signin') Sign In
+
+  h1= title
+
+  ul(class='err') #{error}
+  
+  p Welcome to #{title} 
+
+  form(action='/myapp/signup' method='post') 
+    div
+      label(for='email') Email
+    input(type='text' name='email') 
+    div
+      label(for='password') Password
+    input(type='text' name='password') 
+    //- div
+    //-   label(for='password_conf') Password Confirmation
+    //- input(type='text' name='password_conf') 
+    div
+      input(type='submit' name='signup' value='Sign Up')

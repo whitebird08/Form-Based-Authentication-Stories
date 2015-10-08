@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  a(href='/myapp') MyApp
+
+  //- a(href='/myapp/signin') Log Out
+
+  p Welcome #{email}
+
+  h1= title
+
+  p You are logged in now. Rock On!
+
+  form(action='/myapp/logout' method='post')  
+    div
+      input(type='submit' name='signup' value='Log Out')
+
